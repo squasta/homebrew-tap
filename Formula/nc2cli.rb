@@ -5,21 +5,21 @@
 class Nc2cli < Formula
   desc "CLI tool to manage Nutanix Cloud Clusters (NC2)"
   homepage "https://github.com/squasta/NC2CLI-Go"
-  version "0.2.7"
+  version "0.2.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.7/NC2CLI-Go_0.2.7_darwin_amd64.tar.gz"
-      sha256 "595b3f0bd49ee67f32b31cf6424c3bf8af6d17a3d8a71e07f55d8b526ec9d3a8"
+      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.8/nc2cli_0.2.8_darwin_amd64.tar.gz"
+      sha256 "ec26ef854e760778ee122849e28e4a56fbecec7dbfe71976103f9871267b8c25"
 
       define_method(:install) do
         bin.install "nc2cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.7/NC2CLI-Go_0.2.7_darwin_arm64.tar.gz"
-      sha256 "f3ffc2b408c05e5e60b0a50089609d8727325a3bdafb9f37fb643c2576342cb9"
+      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.8/nc2cli_0.2.8_darwin_arm64.tar.gz"
+      sha256 "25ab79d1a673da517002f9130f89fe955f8c816d98ef951c2a107e80a755d24c"
 
       define_method(:install) do
         bin.install "nc2cli"
@@ -29,15 +29,15 @@ class Nc2cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.7/NC2CLI-Go_0.2.7_linux_amd64.tar.gz"
-      sha256 "195d4143cad93ea5a718a3cb86db4fcf4eaed09d8bf8861e3a79e87907a59de2"
+      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.8/nc2cli_0.2.8_linux_amd64.tar.gz"
+      sha256 "9c6ea511cdbbdd03b1aae05319f9afa869b21ff66055ce8c8556585885cdeb62"
       define_method(:install) do
         bin.install "nc2cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.7/NC2CLI-Go_0.2.7_linux_arm64.tar.gz"
-      sha256 "730e0a912a04c22f9f0b1025bd4c3f0aefacf782236e08f4c4b7d55aaec69c8f"
+      url "https://github.com/squasta/NC2CLI-Go/releases/download/v0.2.8/nc2cli_0.2.8_linux_arm64.tar.gz"
+      sha256 "3ebb58a7769786b167eb2106f805f527161f79589dfa5568fe54af029c67510f"
       define_method(:install) do
         bin.install "nc2cli"
       end
