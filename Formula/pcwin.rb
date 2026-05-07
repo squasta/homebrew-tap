@@ -5,21 +5,21 @@
 class Pcwin < Formula
   desc "CLI to list Windows VMs hosted on a Nutanix Prism Central cluster."
   homepage "https://github.com/squasta/pcwin"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/squasta/pcwin/releases/download/v0.3.1/pcwin_0.3.1_darwin_x86_64.tar.gz"
-      sha256 "008e3eee0f9b860266cd3d88163aac32cf28cd2002e97b2d15f9531554ad64f4"
+      url "https://github.com/squasta/pcwin/releases/download/v0.3.2/pcwin_0.3.2_darwin_x86_64.tar.gz"
+      sha256 "2e1b2c4e428e9cec19ef63081b8b8d1739e1ad5fb82da2a4ee50c740e3157ce9"
 
       define_method(:install) do
         bin.install "pcwin"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/squasta/pcwin/releases/download/v0.3.1/pcwin_0.3.1_darwin_arm64.tar.gz"
-      sha256 "f491691956bb0b35b725c99b0104d9d8e2b8dbeab4ca83b9b7e9783cf6a2cbf6"
+      url "https://github.com/squasta/pcwin/releases/download/v0.3.2/pcwin_0.3.2_darwin_arm64.tar.gz"
+      sha256 "ed9d92701ba58c19c9e085ba7ab26ba61229d2be4227206a301b8ea7f15222f6"
 
       define_method(:install) do
         bin.install "pcwin"
@@ -29,15 +29,15 @@ class Pcwin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/squasta/pcwin/releases/download/v0.3.1/pcwin_0.3.1_linux_x86_64.tar.gz"
-      sha256 "9ff4b2acbe56450982f6d38539a4ab1b48bbfeb3016cd18cfe808cb1b2c49b80"
+      url "https://github.com/squasta/pcwin/releases/download/v0.3.2/pcwin_0.3.2_linux_x86_64.tar.gz"
+      sha256 "716d9531ecc6cf1e18e55add621c20530f5e167d88e3064ac3f3166f77fe071a"
       define_method(:install) do
         bin.install "pcwin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/squasta/pcwin/releases/download/v0.3.1/pcwin_0.3.1_linux_arm64.tar.gz"
-      sha256 "68a1ae2ea1e8f7964b8e508f25eefae562480212abb9ce412b6a60ed9e72f68b"
+      url "https://github.com/squasta/pcwin/releases/download/v0.3.2/pcwin_0.3.2_linux_arm64.tar.gz"
+      sha256 "1ad9078cad69e03bd31b17ad10e86636eeb802bea738760457583a26eb029495"
       define_method(:install) do
         bin.install "pcwin"
       end
